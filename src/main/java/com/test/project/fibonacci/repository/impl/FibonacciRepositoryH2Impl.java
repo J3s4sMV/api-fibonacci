@@ -41,7 +41,6 @@ public class FibonacciRepositoryH2Impl implements FibonacciRepository {
 					+ value + ")";
 			return jdbcTemplate.update(query) > 0 ? true : false;
 		} catch (JsonProcessingException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		return false;
@@ -61,7 +60,6 @@ public class FibonacciRepositoryH2Impl implements FibonacciRepository {
 			query = "update Binnacle set json='".concat(json).concat( "' where sequence= ").concat(String.valueOf(value));
 			return jdbcTemplate.update(query) > 0 ? true : false;
 		} catch (JsonProcessingException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		return false;
